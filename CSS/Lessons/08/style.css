@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+ol {
+  /* change the style of numbering */
+  list-style-type: upper-roman;
+  /* this will remove the indentation */
+  padding: 0;
+}
+
+ul {
+  list-style-type: square;
+  text-align: center;
+  list-style-position: inside;
+  color: blue;
+  line-height: 1.6;
+  /* use the checkmark image as the list i.e. bullet points */
+  /* list-style-image:url(checkmark.png);
+
+  /* shorthand */
+  /* list-style: square url(checkmark.png) inside;
+*/}
+
+/* itll make every even numbered li of ul to red 
+pseudoclass is defined by element followed by: and then pseudoclass */
+/* A pseudo-class is a keyword added to a selector that targets an element in a specific state 
+cannot inject content*/
+ul li:nth-child(odd){
+    color: red;
+}
+
+
+/* A pseudo-element lets you style specific parts of an element or inject content into the page — without needing extra HTML acts like fake child element 
+can inject content*/
+::marker{
+     /* marker is related to list or bullet*/
+      color: red;
+      font-family: fantasy;
+      font-size: 1em;
+      content: "Only $5>>>";
+      
+}

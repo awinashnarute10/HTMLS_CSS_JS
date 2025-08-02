@@ -1,0 +1,52 @@
+/* universal selector(*) aka css resetter it can reset all default values that are not resetable through elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* here the body will grow according to content and overflow wont happen */
+body {
+  min-height: 100vh;
+}
+
+/* 16px is default font size*/
+/* if we put an absolute(px) size to font than user wont be able to choose from browser setting so we dont */
+/* p{
+    font-size: 32px;
+} */
+
+/* % is always relative to something (parent mostly)*/
+header {
+  width: 50%;
+}
+
+/* after we put 50% in header than 50% below in h1 we are saying that 50%of original than 50% of header therefore 25% of original width */
+h1 {
+  border: 2px dashed red;
+  width: 50%;
+  font-size: 3rem;
+  padding: 0.5em;
+  /* here the em is relative to the fonsize of h1 itself as the padding should be relative to the font size of its own element therefore for margin and padding and border em is not relative to parent but the element itself*/
+}
+
+/* rem means root element so its relative to root element so here it means 2 times the size mentioned in root element that is <html> here therefore default */
+p {
+  font-size: 2rem;
+}
+
+/* vw means vieport width that is screens width so it differs with screen size which is good but it also creates a horizontal scrollvar which doesnt look good so % is better*/
+main {
+  font-size: 2rem;
+  width: 50vw;
+  background-color: skyblue;
+}
+
+/* now here we use em that is element which is relative to the element its nested inside(parent)
+so here it means 2 times the font size mentioned in main element as p is nested inside main element  */
+p {
+  font-size: 2em;
+  width: 40ch;
+
+  /* here ch is character that doesnt let more than 40characters in a line */
+}

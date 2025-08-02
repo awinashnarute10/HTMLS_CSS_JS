@@ -1,0 +1,47 @@
+/* known as universal selector:-selects everything on html it doesnt come in inheritance */
+* {
+  font-family: monospace;
+}
+
+/* between two styles whos specificuty is same the one written later will be applied */
+
+body {
+  font-size: 22px;
+}
+
+/* h1, h2 means h1 and h2 but just writing h1 h2 means itll look for h2 nested inside of h1 */
+h1,
+h2 {
+  color: blue;
+}
+
+p {
+  color: purple !important;
+}
+
+p span {
+  text-transform: uppercase;
+  background-color: gold;
+}
+
+/* .gray means class gray and classes can be used more than once */
+.gray {
+  color: gray;
+}
+
+.highlight {
+  background-color: brown;
+}
+
+/* this is id and its more specific than class so more priority */
+#second {
+  font-style: italic;
+}
+
+/* the form elements do not inherit so the following is done so that it inherits properties */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

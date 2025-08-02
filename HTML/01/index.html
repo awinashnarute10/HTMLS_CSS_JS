@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Awinash Narute">
+  <meta name="description" content="This page contains all the things I am learning how to create as I learn HTML">
+  <title>My first webpage</title>
+
+  <link rel="icon" href="/img/html5.png" type="image/x-icon">
+  <!-- relation -->
+  <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+
+  <!-- heading is included in this tag like Main page name logos navs etc -->
+  <header>
+    <h1>Hello World!</h1>
+
+    <hr>
+    <!-- <nav> is a section that contains navigation links -->
+    <!-- aria-label labels the nav invisibly to users its just for screen reader -->
+    <!-- if aria-labelledby is used that uses the content of whatever it is referenced to as the label -->
+    <nav aria-label="primary-navigation">
+
+      <ul>
+        <li>
+          <!-- # with section takes you to that particular section, these are internal links -->
+          <a href="#html">Learn HTML</a>
+        </li>
+
+        <li>
+          <a href="#vacation">Planning a vacation</a>
+        </li>
+
+        <li>
+          <a href="#sports">General Sports Talk</a>
+        </li>
+
+        <li>
+          <a href="#contacts">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <!-- the main includes the main area of the page -->
+  <main>
+
+    <!-- article specifies for screen reader that this consits of blog -->
+    <article id="html">
+      <h2>I am ready to learn HTML</h2>
+      <p>This is my first webpage.</p>
+
+      <!-- <section> creates section on the html page -->
+      <section>
+        <h3>HTML5</h3>
+        <!-- giving height and widhth is necessary for cumulative layout shifting as it gives idea to the web about images height and width  -->
+        <!-- loading eager is the default attribute which loads the image before we cross the fold so it makes the page load slower -->
+        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300"
+          loading="eager">
+
+        <!-- figure can be used for img codes etc
+     and figcaption needs to come either before or after whatever is inside figure -->
+        <figure>
+          <figcaption>An example of HTML5 Code</figcaption>
+
+          <code> &lt;h1&gt;Hello World&lt;/h1&gt;</code>
+        </figure>
+      </section>
+
+      <section>
+        <h3>My Daily ScheduleL</h3>
+        <p>
+          Let me tell you how I....
+          <!-- & is for html entities for writing speacial or reserved characters-->
+          <br>&nbsp;&nbsp;&nbsp;... I learn more about web dev
+          <br>&nbsp;&nbsp;&nbsp;... I plane out my schedule.
+          <br>&nbsp;&nbsp;&nbsp;... I use resources from
+          <abbr title="Mozilla Developer Network">
+            <!-- absolute links pages of different domains -->
+            <a href="https://developer.mozilla.org">MDN</a>
+          </abbr>
+        </p>
+
+        <!-- aside means a part of main content but not related to main content 
+ eg "did you know?"" sections or tip boxes or sidebars-->
+        <aside>
+
+          <!-- details is collapsible/expandible sections -->
+          <details>
+
+            <!-- the first child of details should be summary that is shown before the section is expanded/after collapsed -->
+            <summary>
+              <!-- mark highlights the text -->
+              Click to <mark>expand</mark>
+            </summary>
+
+            <!-- content seen after clicking the summary -->
+            <p>
+              <!-- time is just for browser to read -->
+              This is the hidden content that appears when you expand
+              also its <time datetime="08:00">8 am</time> right now
+              and i will code for <time datetime="PT3H30M">3 hourse and 30 minutes</time>
+            </p>
+
+          </details>
+
+        </aside>
+        <br>
+
+        <!-- table only takes up space enough to contain its content unlike others who take the whole width of the page -->
+        <table>
+
+          <!-- gives semantics to the table also seen on page -->
+          <caption>My Daily Schedule</caption>
+
+          <!-- thead has no effect on appearance just for semantics for screen readers -->
+          <thead>
+            <tr>
+              <th></th>
+
+              <!-- scope in th specifies the heading is for col or row cells -->
+              <th id="time" scope="col">Time</th>
+              <th scope="col">Activity</th>
+            </tr>
+          </thead>
+
+          <!-- tbody has same effects as thead -->
+          <tbody></tbody>
+          <tr>
+            <th id="morning" scope="row">Morning</th>
+            <!-- the headers again specifies the heading cells for this using id of heading cells -->
+            <td headers="time morning">
+              <time datetime="08:00">8am</time> - <time datetime="11:00">11am</time>
+            </td>
+
+            <td>Write code</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Break</th>
+            <td>
+              <time datetime="11:00">11am</time> - <time datetime="12:00">12pm</time>
+            </td>
+
+            <td>Eat Lunch</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Afternoon</th>
+            <td>
+              <time datetime="12:00">12pm</time> - <time datetime="17:00">5pm</time>
+            </td>
+
+            <td>Study for other courses </td>
+          </tr>
+
+          <!-- colspan takes up space of specified columns -->
+          <tr>
+            <th colspan="3">Break/ colSpan</th>
+          </tr>
+
+          <!-- rowspan takes up space of specified rows -->
+          <tr>
+            <th scope="row">Evening</th>
+            <td rowspan="2">All other time/ rowspan</td>
+            <td>Free time</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Night</th>
+            <td>Sleep</td>
+          </tr>
+          </tbody>
+
+          <!-- tfoot has same effect as thead and tbody just for semantics -->
+          <tfoot>
+            <tr>
+              <td colspan="3">Thats just what i do everyday!</td>
+            </tr>
+          </tfoot>
+
+        </table>
+
+      </section>
+    </article>
+
+    <hr>
+
+    <article id="vacation">
+      <h2>I am also planning a vacation</h2>
+      <!-- inline element dont break line as they dont take space but block element break lines as they take up space-->
+      <!-- <em> means emphasis it makes the words italic -->
+      <p>I've been working hard and <em>need a getaway</em></p>
+      <p>I live in Sangli so i want to visit Goa</p>
+
+      <section>
+        <h3>Places i would like to visit</h3>
+        <p>
+          i have heard good things about japan, and in japan i would like to
+          visit:-
+        </p>
+
+        <!-- figure just tells that there is a self contained content that means it can be understood independently of the rest of the page -->
+        <figure>
+          <!-- loading= lazy means it loads the image only when we cross the fold so this attribute helps in loading the page faster -->
+          <img src="img/caribbean.jpg" alt="Carribean beach" title="should have been japan" width="400" height="225"
+            loading="lazy">
+
+          <!-- gives caption -->
+          <figcaption>Caribbean Beach</figcaption>
+        </figure>
+
+        <!-- ordered list -->
+        <ol>
+          <li>Tokyo</li>
+          <li>Countryside</li>
+          <li>Animecon</li>
+          <li>Mountains</li>
+        </ol>
+
+        <figure>
+          <img src="img/vacation.jpg" alt="cancum vacation" title="its 5 o'clock somewhere" loading="lazy" width="400"
+            height="267">
+          <figcaption>Caribbean vacation image</figcaption>
+        </figure>
+
+      </section>
+
+      <section>
+        <h3>Places i would like to avoid</h3>
+        <!-- <strong> == bold -->
+        <p>Anywhere hot and humid. <strong>No way!</strong> for eg:</p>
+        <ul>
+          <!-- putting in paragrapgh makes them space out -->
+          <li>
+            <p>Bangladesh</p>
+          </li>
+          <li>
+            <p>Senegal</p>
+          </li>
+          <li>Pakistan</li>
+          <li>Middle east</li>
+        </ul>
+        <address>
+          Near bus stop opp to hospital <br>
+          Top floor residential building
+        </address>
+      </section>
+
+    </article>
+    <hr>
+
+    <article id="sports">
+      <h2>New section to talk about favourite sports</h2>
+      <p>Here i will talk about sports generally</p>
+
+      <h3>Favourite football players</h3>
+      <!-- dl:- desctiption list -->
+      <dl>
+        <!-- dt:- description term -->
+        <dt>Messi</dt>
+        <!-- dd:- description definition -->
+        <dd>Greatest of all time period</dd>
+
+        <dt>Neymar</dt>
+        <dd>A very skilled player</dd>
+
+        <dt>lamine yamal</dt>
+        <dd>Dominating older players at the age of 17</dd>
+      </dl>
+    </article>
+
+    <hr>
+
+    <article id="contact">
+
+      <h2>Contact Me</h2>
+      <p>I'd really like to hear from you</p>
+
+      <form action="https://httpbin.org/get" method="get" autocomplete="off">
+        <!-- fieldset creates visible section in form-->
+        <fieldset>
+
+          <!-- legend is just the caption for particular fieldset -->
+          <legend>Personal info</legend>
+
+          <!-- id of input = for of label -->
+          <!-- autofocus brings cursor on input directly when page loads or refreshes and there can be only one input with autfocus-->
+          <p>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" placeholder="Awinash" autocomplete="on" required
+              autofocus>
+          </p>
+          <p>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Narute" autocomplete="on" required>
+          </p>
+          <p>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="your secret" autocomplete="on" required>
+          </p>
+          <p>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="+91 9823842341" pattern="[0-9]{10}" required>
+          </p>
+          <p>
+            <!-- step means interval -->
+            <label for="decade">Favourite decade</label>
+            <input type="number" name="decade" id="decade" min="1950" max="2030" step="10" value="2000">
+          </p>
+          <p>
+            <label for="coffee">Favourite Coffee:</label>
+            <!-- select is dropdown list to choose from -->
+            <!-- multiple means multiple options can be selected and  -->
+            <select name="coffee" id="coffee" multiple size="5" required>
+              <!-- optgroup groups the options and the label is seen -->
+              <optgroup label="Coffees">
+                <option value="regular coffee">Regular Coffee</option>
+                <option value="iced coffee">Iced Coffee</option>
+              </optgroup>
+
+              <optgroup label="Espresso Drinks">
+                <option value="latte">Latte</option>
+                <option value="cappucino">Cappuccino</option>
+                <!-- selected will select that option before the user chooses anything else -->
+                <option value="cortado" selected>Cortado</option>
+                <option value="americano">Americano</option>
+                <option value="matcha">Matcha</option>
+              </optgroup>
+              <option value="other">Other</option>
+            </select>
+          </p>
+          <p>
+            <!-- just like select input has datalist -->
+            <label for="coffee2">Favourite Coffee 2</label>
+            <input type="text" id="coffee2" name="coffee2" list="coffee-list">
+            <datalist id="coffee-list">
+              <option value="coffee"></option>
+              <option value="latte"></option>
+              <option value="espresso"></option>
+              <option value="cortado"></option>
+              <option value="americano"></option>
+              <option value="other"></option>
+            </datalist>
+          </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+          <legend>What is your favourite food?</legend>
+          
+          <!-- here all name is same(food) so that only one radio button can be selected-->
+          <p>
+            <input type="radio" name="food" id="tacos" value="tacos" required>
+            <label for="tacos">Tacos</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="pizza" value="pizza">
+            <label for="pizza">Pizza</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="other" value="other">
+            <label for="other">Other</label>
+          </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+          <legend>Do you have pets?</legend>
+          <!-- but in checkbox we can select more than 1 -->
+          <p>
+            <input type="checkbox" name="pets" id="dog" value="dog">
+            <label for="dog">Dog</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="cat" value="cat">
+            <label for="cat">Cat</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="fish" value="fish">
+            <label for="fish">Fish</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="otherpet" value="otherpet">
+            <label for="otherpet">Other</label>
+          </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+          <legend>Send me a note</legend>
+          <p>
+            <label for="message">Your message</label>
+          <br><br>
+            <!-- you can write something in textarea from here but better to leave it blank for the user -->
+            <textarea name="message" id="message" cols="30" rows="10"
+            placeholder="Type your message here....."></textarea>
+          </p>
+        </fieldset>
+
+        <!-- button is more customizable thats why that should be used to submit instead of input that is only cutomizable thru value attribute(text only)  -->
+         <input type="submit" value="submit">
+         <br>
+        <button type="submit">Submit</button>
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+        <button type="reset">Reset</button>
+
+      </form>
+
+    </article>
+
+  </main>
+
+  <hr>
+
+  <footer>
+    <!-- reference links :- pages on same domain and relative to main page -->
+    <!-- target is where it opens the link -->
+    &lt;&lt;&lt; &copy;
+    <a href="about.html" target="_blank">Awinash Narute</a>&gt;&gt;&gt;
+
+    <p>
+      <!-- just # takes you back to the top of the html page -->
+      <a href="#">Back to Top</a>
+    </p>
+
+  </footer>
+</body>
+
+</html>

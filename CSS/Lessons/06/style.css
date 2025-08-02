@@ -1,0 +1,29 @@
+/* typography is the way that text is arranged and presented not related to font*/
+/* padding is not inherited automatically needs to be done manually */
+
+/* importing fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  padding: 25%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+
+input, button{
+    font: inherit;
+   
+}
+
+p{
+    text-decoration:overline;
+    text-transform: capitalize;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    word-spacing: 0.5em;
+    font-weight: bolder;
+}

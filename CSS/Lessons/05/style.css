@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* the box sizing tells whether to acoount for border and padding or just the content*/
+  /* border box takes account that is if 400px width is specified then content + border+ padding = 400px */
+  /* if content box is chooses than content+border+padding>400 as only content is set to 400px and border and padding are added on top of it */
+  box-sizing: border-box;
+}
+
+.container {
+  border: 2px dashed red;
+  margin: 1.5em 2em; /* can provide for top bottom left right on same line same applies for padding too and border too*/
+  /* margin-top: 1em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  margin-left: 2em;   this is just more specific than just using marging and can control more*/
+  font-size: 1.5rem;
+  padding: 1em;
+
+  /* outline is border's border just the thing is that it doesnt take any space */
+  outline: 5px solid purple;
+/* offset tells the distance between it and border and can be negative too to be inside of border*/
+  outline-offset: 20px;
+}
+
+
+.circle{
+    margin: 3rem auto;
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 2px solid black;
+    outline: 2px solid red;
+}
